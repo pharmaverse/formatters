@@ -1,4 +1,4 @@
-url: https://insightsengineering.github.io/formatters
+url: https://pharmaverse.github.io/formatters
 template:
   package: nesttemplate
 navbar:
@@ -17,7 +17,7 @@ navbar:
         href: unit-test-report-non-cran/
     github:
       icon: fa-github
-      href: https://github.com/insightsengineering/formatters
+      href: https://github.com/pharmaverse/formatters
 reference:
   - title: Formatters Overview
     contents:
