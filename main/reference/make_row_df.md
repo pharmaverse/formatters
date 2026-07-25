@@ -3,7 +3,7 @@
 All relevant information about table rows (e.g. indentations) is
 summarized in a `data.frame`. This function works **only** on `rtables`
 and `rlistings` objects, and not on their `print` counterparts (like
-[`MatrixPrintForm`](https://insightsengineering.github.io/formatters/reference/MatrixPrintForm.md)).
+[`MatrixPrintForm`](https://pharmaverse.github.io/formatters/reference/MatrixPrintForm.md)).
 
 ## Usage
 
@@ -115,7 +115,7 @@ make_row_df(
   (`font_spec`)\
   a font_spec object specifying the font information to use for
   calculating string widths and heights, as returned by
-  [`font_spec()`](https://insightsengineering.github.io/formatters/reference/font_spec.md).
+  [`font_spec()`](https://pharmaverse.github.io/formatters/reference/font_spec.md).
 
 - col_gap:
 
@@ -131,7 +131,7 @@ make_row_df(
   or `"sas"`)\
   iec, the default, and iec_mod performs rounding compliant with IEC
   60559 (see notes in
-  [`round_fmt()`](https://insightsengineering.github.io/formatters/reference/round_fmt.md)),
+  [`round_fmt()`](https://pharmaverse.github.io/formatters/reference/round_fmt.md)),
   while sas performs nearest-value rounding consistent with rounding
   within SAS.\
   In addition, the rounding of a negative number that rounds to zero

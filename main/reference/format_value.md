@@ -47,7 +47,7 @@ format_value(
   or `"sas"`)\
   iec, the default, and iec_mod performs rounding compliant with IEC
   60559 (see notes in
-  [`round_fmt()`](https://insightsengineering.github.io/formatters/reference/round_fmt.md)),
+  [`round_fmt()`](https://pharmaverse.github.io/formatters/reference/round_fmt.md)),
   while sas performs nearest-value rounding consistent with rounding
   within SAS.\
   In addition, the rounding of a negative number that rounds to zero
@@ -65,7 +65,7 @@ A length-zero value for `na_str` will be interpreted as `"NA"`.
 
 ## See also
 
-[`round_fmt()`](https://insightsengineering.github.io/formatters/reference/round_fmt.md)
+[`round_fmt()`](https://pharmaverse.github.io/formatters/reference/round_fmt.md)
 
 ## Examples
 

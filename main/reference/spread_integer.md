@@ -23,7 +23,7 @@ spread_integer(x, len)
 ## Value
 
 If `x` is a scalar whole number value (see
-[`is.wholenumber()`](https://insightsengineering.github.io/formatters/reference/is.wholenumber.md)),
+[`is.wholenumber()`](https://pharmaverse.github.io/formatters/reference/is.wholenumber.md)),
 the value `x` is repeated `len` times. Otherwise, an error is thrown.
 
 ## Examples

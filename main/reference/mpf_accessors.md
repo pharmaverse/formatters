@@ -2,7 +2,7 @@
 
 Most of these functions, particularly the setters, are intended almost
 exclusively for internal use in, e.g.,
-[`matrix_form`](https://insightsengineering.github.io/formatters/reference/matrix_form.md)
+[`matrix_form`](https://pharmaverse.github.io/formatters/reference/matrix_form.md)
 methods, and should generally not be called by end users.
 
 ## Usage

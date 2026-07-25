@@ -72,7 +72,7 @@ toString(
   character to repeat to create header/body separator line. If `NULL`,
   the object value will be used. If `" "`, an empty separator will be
   printed. See
-  [`default_hsep()`](https://insightsengineering.github.io/formatters/reference/default_horizontal_sep.md)
+  [`default_hsep()`](https://pharmaverse.github.io/formatters/reference/default_horizontal_sep.md)
   for more information.
 
 - fontspec:
@@ -80,7 +80,7 @@ toString(
   (`font_spec`)\
   a font_spec object specifying the font information to use for
   calculating string widths and heights, as returned by
-  [`font_spec()`](https://insightsengineering.github.io/formatters/reference/font_spec.md).
+  [`font_spec()`](https://pharmaverse.github.io/formatters/reference/font_spec.md).
 
 - ttype_ok:
 
@@ -94,7 +94,7 @@ toString(
   (`string`)\
   The type of rounding to perform. Allowed values: (`"iec"`, `"iec_mod"`
   or `"sas"`) See
-  [`round_fmt()`](https://insightsengineering.github.io/formatters/reference/round_fmt.md)
+  [`round_fmt()`](https://pharmaverse.github.io/formatters/reference/round_fmt.md)
   for details.
 
 ## Value
@@ -112,7 +112,7 @@ above.
 
 ## See also
 
-[`wrap_string()`](https://insightsengineering.github.io/formatters/reference/wrap_string.md)
+[`wrap_string()`](https://pharmaverse.github.io/formatters/reference/wrap_string.md)
 
 ## Examples
 

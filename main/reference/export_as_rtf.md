@@ -48,7 +48,7 @@ export_as_rtf(
 
   (`string`)\
   name of a page type. See
-  [`page_types`](https://insightsengineering.github.io/formatters/reference/page_types.md).
+  [`page_types`](https://pharmaverse.github.io/formatters/reference/page_types.md).
   Ignored when `pg_width` and `pg_height` are set directly.
 
 - pg_width:
@@ -96,7 +96,7 @@ export_as_rtf(
   (`font_spec`)\
   a font_spec object specifying the font information to use for
   calculating string widths and heights, as returned by
-  [`font_spec()`](https://insightsengineering.github.io/formatters/reference/font_spec.md).
+  [`font_spec()`](https://pharmaverse.github.io/formatters/reference/font_spec.md).
 
 - paginate:
 
@@ -112,7 +112,7 @@ export_as_rtf(
   or `"sas"`)\
   iec, the default, and iec_mod performs rounding compliant with IEC
   60559 (see notes in
-  [`round_fmt()`](https://insightsengineering.github.io/formatters/reference/round_fmt.md)),
+  [`round_fmt()`](https://pharmaverse.github.io/formatters/reference/round_fmt.md)),
   while sas performs nearest-value rounding consistent with rounding
   within SAS.\
   In addition, the rounding of a negative number that rounds to zero
@@ -123,7 +123,7 @@ export_as_rtf(
 - ...:
 
   additional parameters passed to
-  [`paginate_to_mpfs()`](https://insightsengineering.github.io/formatters/reference/paginate_indices.md).
+  [`paginate_to_mpfs()`](https://pharmaverse.github.io/formatters/reference/paginate_indices.md).
 
 ## Details
 
@@ -139,4 +139,4 @@ RTF export occurs via the following steps:
   file.
 
 Conversion of `MatrixPrintForm` objects to RTF is done via
-[`mpf_to_rtf()`](https://insightsengineering.github.io/formatters/reference/mpf_to_rtf.md).
+[`mpf_to_rtf()`](https://pharmaverse.github.io/formatters/reference/mpf_to_rtf.md).

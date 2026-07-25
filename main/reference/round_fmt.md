@@ -1,7 +1,7 @@
 # Round and prepare a value for display
 
 This function is used within
-[`format_value()`](https://insightsengineering.github.io/formatters/reference/format_value.md)
+[`format_value()`](https://pharmaverse.github.io/formatters/reference/format_value.md)
 to prepare numeric values within cells for formatting and display.
 
 ## Usage
@@ -91,7 +91,7 @@ documentation).
 
 ## See also
 
-[`format_value()`](https://insightsengineering.github.io/formatters/reference/format_value.md),
+[`format_value()`](https://pharmaverse.github.io/formatters/reference/format_value.md),
 [`round()`](https://rdrr.io/r/base/Round.html),
 [`sprintf()`](https://rdrr.io/r/base/sprintf.html)
 

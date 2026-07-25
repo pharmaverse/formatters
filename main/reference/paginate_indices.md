@@ -94,14 +94,14 @@ diagnose_pagination(
 
   (`ANY`)\
   object to be paginated. Must have a
-  [`matrix_form()`](https://insightsengineering.github.io/formatters/reference/matrix_form.md)
+  [`matrix_form()`](https://pharmaverse.github.io/formatters/reference/matrix_form.md)
   method.
 
 - page_type:
 
   (`string`)\
   name of a page type. See
-  [`page_types`](https://insightsengineering.github.io/formatters/reference/page_types.md).
+  [`page_types`](https://pharmaverse.github.io/formatters/reference/page_types.md).
   Ignored when `pg_width` and `pg_height` are set directly.
 
 - font_family:
@@ -221,7 +221,7 @@ diagnose_pagination(
   (`font_spec`)\
   a font_spec object specifying the font information to use for
   calculating string widths and heights, as returned by
-  [`font_spec()`](https://insightsengineering.github.io/formatters/reference/font_spec.md).
+  [`font_spec()`](https://pharmaverse.github.io/formatters/reference/font_spec.md).
 
 - round_type:
 
@@ -231,7 +231,7 @@ diagnose_pagination(
   or `"sas"`)\
   iec, the default, and iec_mod performs rounding compliant with IEC
   60559 (see notes in
-  [`round_fmt()`](https://insightsengineering.github.io/formatters/reference/round_fmt.md)),
+  [`round_fmt()`](https://pharmaverse.github.io/formatters/reference/round_fmt.md)),
   while sas performs nearest-value rounding consistent with rounding
   within SAS.\
   In addition, the rounding of a negative number that rounds to zero
@@ -249,7 +249,7 @@ diagnose_pagination(
 
   (`string`)\
   placeholder string for page numbers. See
-  [default_page_number](https://insightsengineering.github.io/formatters/reference/default_page_number.md)
+  [default_page_number](https://pharmaverse.github.io/formatters/reference/default_page_number.md)
   for more information. Defaults to `NULL`.
 
 - ...:
@@ -307,7 +307,7 @@ could be found.
 
 All three of these functions generally support all classes which have a
 corresponding
-[`matrix_form()`](https://insightsengineering.github.io/formatters/reference/matrix_form.md)
+[`matrix_form()`](https://pharmaverse.github.io/formatters/reference/matrix_form.md)
 method which returns a valid `MatrixPrintForm` object (including
 `MatrixPrintForm` objects themselves).
 
@@ -323,20 +323,20 @@ generally involves the creation of, e.g., page-specific titles which
 apply to these forced paginations. `paginate_to_mpfs` and
 `diagnose_pagination` support forced pagination by automatically calling
 the
-[`do_forced_paginate()`](https://insightsengineering.github.io/formatters/reference/do_forced_paginate.md)
+[`do_forced_paginate()`](https://pharmaverse.github.io/formatters/reference/do_forced_paginate.md)
 generic on the object and then paginating each object returned by that
 generic separately. The assumption here, then, is that page-specific
 titles and such are handled by the class'
-[`do_forced_paginate()`](https://insightsengineering.github.io/formatters/reference/do_forced_paginate.md)
+[`do_forced_paginate()`](https://pharmaverse.github.io/formatters/reference/do_forced_paginate.md)
 method.
 
 `paginate_indices`, on the other hand, *does not support forced
 pagination*, because it returns only a set of indices for row and column
 subsetting for each page, and thus cannot retain any changes, e.g., to
 titles, done within
-[`do_forced_paginate()`](https://insightsengineering.github.io/formatters/reference/do_forced_paginate.md).
+[`do_forced_paginate()`](https://pharmaverse.github.io/formatters/reference/do_forced_paginate.md).
 `paginate_indices` does call
-[`do_forced_paginate()`](https://insightsengineering.github.io/formatters/reference/do_forced_paginate.md),
+[`do_forced_paginate()`](https://pharmaverse.github.io/formatters/reference/do_forced_paginate.md),
 but instead of continuing it throws an error in the case that the result
 is larger than a single "page".
 

@@ -2,7 +2,7 @@
 
 The PDF output from this function is based on the ASCII output created
 with
-[`toString()`](https://insightsengineering.github.io/formatters/reference/tostring.md).
+[`toString()`](https://pharmaverse.github.io/formatters/reference/tostring.md).
 
 ## Usage
 
@@ -55,7 +55,7 @@ export_as_pdf(
 
   (`string`)\
   name of a page type. See
-  [`page_types`](https://insightsengineering.github.io/formatters/reference/page_types.md).
+  [`page_types`](https://pharmaverse.github.io/formatters/reference/page_types.md).
   Ignored when `pg_width` and `pg_height` are set directly.
 
 - landscape:
@@ -128,7 +128,7 @@ export_as_pdf(
 
   (`string`)\
   placeholder string for page numbers. See
-  [default_page_number](https://insightsengineering.github.io/formatters/reference/default_page_number.md)
+  [default_page_number](https://pharmaverse.github.io/formatters/reference/default_page_number.md)
   for more information. Defaults to `NULL`.
 
 - lpp:
@@ -151,7 +151,7 @@ export_as_pdf(
   character to repeat to create header/body separator line. If `NULL`,
   the object value will be used. If `" "`, an empty separator will be
   printed. See
-  [`default_hsep()`](https://insightsengineering.github.io/formatters/reference/default_horizontal_sep.md)
+  [`default_hsep()`](https://pharmaverse.github.io/formatters/reference/default_horizontal_sep.md)
   for more information.
 
 - indent_size:
@@ -192,7 +192,7 @@ export_as_pdf(
   (`font_spec`)\
   a font_spec object specifying the font information to use for
   calculating string widths and heights, as returned by
-  [`font_spec()`](https://insightsengineering.github.io/formatters/reference/font_spec.md).
+  [`font_spec()`](https://pharmaverse.github.io/formatters/reference/font_spec.md).
 
 - ttype_ok:
 
@@ -209,7 +209,7 @@ export_as_pdf(
   or `"sas"`)\
   iec, the default, and iec_mod performs rounding compliant with IEC
   60559 (see notes in
-  [`round_fmt()`](https://insightsengineering.github.io/formatters/reference/round_fmt.md)),
+  [`round_fmt()`](https://pharmaverse.github.io/formatters/reference/round_fmt.md)),
   while sas performs nearest-value rounding consistent with rounding
   within SAS.\
   In addition, the rounding of a negative number that rounds to zero
@@ -229,7 +229,7 @@ printed to the terminal), with `cpp` (as defined above) as the default
 
 ## See also
 
-[`export_as_txt()`](https://insightsengineering.github.io/formatters/reference/export_as_txt.md)
+[`export_as_txt()`](https://pharmaverse.github.io/formatters/reference/export_as_txt.md)
 
 ## Examples
 

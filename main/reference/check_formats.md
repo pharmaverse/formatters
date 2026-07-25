@@ -16,7 +16,7 @@ check_aligns(algn)
 
   (`string` or `function`)\
   format string or an object returned by
-  [`sprintf_format()`](https://insightsengineering.github.io/formatters/reference/sprintf_format.md)
+  [`sprintf_format()`](https://pharmaverse.github.io/formatters/reference/sprintf_format.md)
 
 - stop_otherwise:
 

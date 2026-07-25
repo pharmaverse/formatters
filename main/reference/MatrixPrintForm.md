@@ -60,7 +60,7 @@ MatrixPrintForm(
   matrix of same dimension as `strings` giving the text alignment
   information for each element. Must be repeated to match placeholders
   in `strings`. Must be a supported text alignment. See
-  [decimal_align](https://insightsengineering.github.io/formatters/reference/decimal_align.md)
+  [decimal_align](https://pharmaverse.github.io/formatters/reference/decimal_align.md)
   for allowed values.
 
 - formats:
@@ -74,7 +74,7 @@ MatrixPrintForm(
 
   (`data.frame`)\
   data frame with row-information necessary for pagination (see
-  [`basic_pagdf()`](https://insightsengineering.github.io/formatters/reference/basic_pagdf.md)
+  [`basic_pagdf()`](https://pharmaverse.github.io/formatters/reference/basic_pagdf.md)
   for more details).
 
 - colpaths:
@@ -178,7 +178,7 @@ MatrixPrintForm(
 
   (`numeric(1)`)\
   table inset. See
-  [`table_inset()`](https://insightsengineering.github.io/formatters/reference/table_inset.md).
+  [`table_inset()`](https://pharmaverse.github.io/formatters/reference/table_inset.md).
 
 - colwidths:
 
@@ -197,7 +197,7 @@ MatrixPrintForm(
   (`font_spec`)\
   a font_spec object specifying the font information to use for
   calculating string widths and heights, as returned by
-  [`font_spec()`](https://insightsengineering.github.io/formatters/reference/font_spec.md).
+  [`font_spec()`](https://pharmaverse.github.io/formatters/reference/font_spec.md).
 
 - rep_cols:
 
@@ -210,7 +210,7 @@ MatrixPrintForm(
   (`string`)\
   The type of rounding to perform. Allowed values: (`"iec"`, `"iec_mod"`
   or `"sas"`) See
-  [`round_fmt()`](https://insightsengineering.github.io/formatters/reference/round_fmt.md)
+  [`round_fmt()`](https://pharmaverse.github.io/formatters/reference/round_fmt.md)
   for details.
 
 ## Value

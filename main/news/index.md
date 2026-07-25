@@ -75,7 +75,7 @@ CRAN release: 2024-06-19
 - Fixed a bug causing recursive appending of page number text during
   pagination.
 - Deprecated `width`, `height` and `fontsize` arguments of
-  [`export_as_pdf()`](https://insightsengineering.github.io/formatters/reference/export_as_pdf.md)
+  [`export_as_pdf()`](https://pharmaverse.github.io/formatters/reference/export_as_pdf.md)
   using `lifecycle` package.
 
 ## formatters 0.5.6
@@ -116,7 +116,7 @@ CRAN release: 2023-12-06
 - Applied `styler` and resolved package lint. Changed default
   indentation from 4 spaces to 2.
 - Added the possibility of setting a general default using
-  [`set_default_hsep()`](https://insightsengineering.github.io/formatters/reference/default_horizontal_sep.md)
+  [`set_default_hsep()`](https://pharmaverse.github.io/formatters/reference/default_horizontal_sep.md)
   that sets up the option `getOption("formatters_default_hsep")`.
 - Allowed section divider between header and table body.
 - Added support for combining duplicate referential footnotes.
@@ -130,7 +130,7 @@ CRAN release: 2023-12-06
 ## formatters 0.5.4
 
 - Fixed a bug in
-  [`paginate_to_mpfs()`](https://insightsengineering.github.io/formatters/reference/paginate_indices.md)
+  [`paginate_to_mpfs()`](https://pharmaverse.github.io/formatters/reference/paginate_indices.md)
   so that formatting in listings key columns is retained with pagination
   [`insightsengineering/rlistings#155`](https://github.com/insightsengineering/rlistings/issues/155).
 - Improved error message for pagination when `cpp` or `lpp` is too small
@@ -159,7 +159,7 @@ CRAN release: 2023-08-25
 - Updated `export_as_txt` to pass `rep_cols` argument to pagination
   function.
 - Added
-  [`list_valid_aligns()`](https://insightsengineering.github.io/formatters/reference/list_formats.md)
+  [`list_valid_aligns()`](https://pharmaverse.github.io/formatters/reference/list_formats.md)
   that lists the available alignments.
 - Set default values for `na_str` and `align` to `NULL` in the format
   configuration function `fmt_config`.
@@ -376,4 +376,4 @@ CRAN release: 2022-03-29
 
 - Add `formats` argument to matrix_form informal class/constructor for
   use in
-  [`rtables::table_shell`](https://insightsengineering.github.io/rtables/latest-tag/reference/table_shell.html)
+  [`rtables::table_shell`](https://rdrr.io/pkg/rtables/man/table_shell.html)

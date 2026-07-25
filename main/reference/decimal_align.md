@@ -39,8 +39,8 @@ when decimal alignment is used.
 
 ## See also
 
-[`toString()`](https://insightsengineering.github.io/formatters/reference/tostring.md),
-[`MatrixPrintForm()`](https://insightsengineering.github.io/formatters/reference/MatrixPrintForm.md)
+[`toString()`](https://pharmaverse.github.io/formatters/reference/tostring.md),
+[`MatrixPrintForm()`](https://pharmaverse.github.io/formatters/reference/MatrixPrintForm.md)
 
 ## Examples
 

@@ -38,20 +38,20 @@ pagination.
 ## Note
 
 Specifying font in this way to, e.g.,
-[`export_as_txt()`](https://insightsengineering.github.io/formatters/reference/export_as_txt.md)
+[`export_as_txt()`](https://pharmaverse.github.io/formatters/reference/export_as_txt.md)
 or
-[`toString()`](https://insightsengineering.github.io/formatters/reference/tostring.md)
+[`toString()`](https://pharmaverse.github.io/formatters/reference/tostring.md)
 will not affect the font size of the output, as these are both raw text
 formats.
-[`export_as_pdf()`](https://insightsengineering.github.io/formatters/reference/export_as_pdf.md)
+[`export_as_pdf()`](https://pharmaverse.github.io/formatters/reference/export_as_pdf.md)
 will use the specified font.
 
 ## See also
 
-[`nchar_ttype()`](https://insightsengineering.github.io/formatters/reference/nchar_ttype.md),
-[`toString()`](https://insightsengineering.github.io/formatters/reference/tostring.md),
-[`pagination_algo`](https://insightsengineering.github.io/formatters/reference/pagination_algo.md),
-[`export_as_pdf()`](https://insightsengineering.github.io/formatters/reference/export_as_pdf.md)
+[`nchar_ttype()`](https://pharmaverse.github.io/formatters/reference/nchar_ttype.md),
+[`toString()`](https://pharmaverse.github.io/formatters/reference/tostring.md),
+[`pagination_algo`](https://pharmaverse.github.io/formatters/reference/pagination_algo.md),
+[`export_as_pdf()`](https://pharmaverse.github.io/formatters/reference/export_as_pdf.md)
 
 ## Examples
 

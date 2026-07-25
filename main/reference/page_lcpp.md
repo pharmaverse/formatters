@@ -25,7 +25,7 @@ page_lcpp(
 
   (`string`)\
   name of a page type. See
-  [`page_types`](https://insightsengineering.github.io/formatters/reference/page_types.md).
+  [`page_types`](https://pharmaverse.github.io/formatters/reference/page_types.md).
   Ignored when `pg_width` and `pg_height` are set directly.
 
 - landscape:
@@ -73,7 +73,7 @@ page_lcpp(
   (`font_spec`)\
   a font_spec object specifying the font information to use for
   calculating string widths and heights, as returned by
-  [`font_spec()`](https://insightsengineering.github.io/formatters/reference/font_spec.md).
+  [`font_spec()`](https://pharmaverse.github.io/formatters/reference/font_spec.md).
 
 ## Value
 
