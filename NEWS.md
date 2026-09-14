@@ -1,6 +1,7 @@
 ## formatters 0.5.12.9003
 
 * Export `mf_col_widths` accessor (`getter` and `setter`).
+* Fixed a bug in listing pagination where the logical index of empty key columns was recycled across all columns, selecting the wrong columns for repeated key labels and (on recent R-devel) emitting a subscript-recycling warning that caused CRAN test failures.
 
 ## formatters 0.5.12
 * Added `"default"` format label which behaves like `"xx"` in `format_value` but indicates formatting behavior can be inherited from parent structures in upstream code.
@@ -38,7 +39,7 @@
 ## formatters 0.5.6
  * Added "N=xx" format and unit test for it.
  * Added error catch for `\r` recursive special character.
- * Fixed pagination unexpected counts for `rlistings`' pagination by removing the manual subsetting workaround and fixing [`insightsengineering/rlistings#155`](https://github.com/insightsengineering/rlistings/issues/155).
+ * Fixed pagination unexpected counts for `rlistings`' pagination by removing the manual subsetting workaround and fixing [`pharmaverse/rlistings#155`](https://github.com/pharmaverse/rlistings/issues/155).
  * Fixed mismatch between pagination and exports regarding the value assigned to parameter `max_width`. Introduced general handler `.handle_max_width` for pagination, exports, and `toString`.
  * Fixed bug in `format_value` causing a warning for vectors containing both NA and non-NA values.
  * Fixed issue with `var_label` assignment that needed to be of non-named strings.
@@ -61,7 +62,7 @@
    strings with dots and spaces correctly.
 
 ## formatters 0.5.4
- * Fixed a bug in `paginate_to_mpfs()` so that formatting in listings key columns is retained with pagination [`insightsengineering/rlistings#155`](https://github.com/insightsengineering/rlistings/issues/155).
+ * Fixed a bug in `paginate_to_mpfs()` so that formatting in listings key columns is retained with pagination [`pharmaverse/rlistings#155`](https://github.com/pharmaverse/rlistings/issues/155).
  * Improved error message for pagination when `cpp` or `lpp` is too small in comparison to the column or row widths.
  * Added full support of newline characters in any part of `rtables` objects.
  * Modified default vertical alignment for top left information to bottom.
@@ -78,7 +79,7 @@
  * Updated `export_as_txt` to pass `rep_cols` argument to pagination function.
  * Added `list_valid_aligns()` that lists the available alignments.
  * Set default values for `na_str` and `align` to `NULL` in the format configuration function `fmt_config`.
- * Fixed a bug that threw warning when `prov_footer` length is greater than `1` [`insightsengineering/rtables#705`](https://github.com/insightsengineering/rtables/issues/705).
+ * Fixed a bug that threw warning when `prov_footer` length is greater than `1` [`pharmaverse/rtables#705`](https://github.com/pharmaverse/rtables/issues/705).
 
 ## formatters 0.5.1
  * Updated `export_as_txt` to print split label when using `page_by` with only one level.
@@ -89,7 +90,7 @@
    from `NULL` to `"NA"`. This affects only `rlistings`, where the new default takes effect.
 
 ## formatters 0.5.0
- * Fix bug in `MPF` pagination (and thus export_as_txt) when column labels had newlines ([#150](https://github.com/insightsengineering/formatters/issues/150), [`insightsengineering/rtables#634`](https://github.com/insightsengineering/rtables/issues/634))
+ * Fix bug in `MPF` pagination (and thus export_as_txt) when column labels had newlines ([#150](https://github.com/pharmaverse/formatters/issues/150), [`pharmaverse/rtables#634`](https://github.com/pharmaverse/rtables/issues/634))
  * `font_size` is now 8 consistently across the pagination machinery.
  * When specified, margins are in inches (including the default).
  * Fix off-by-one error in pagination machinery for certain cases.
@@ -107,7 +108,7 @@
 
 ## formatters 0.4.0
  * Cell values and row labels are now word-wrapped based on column widths (`widths` in `toString` and `colwidths` in pagination and exporters.
- * New "N=xx (xx%)" format support (https://github.com/insightsengineering/rtables/issues/516).
+ * New "N=xx (xx%)" format support (https://github.com/pharmaverse/rtables/issues/516).
  * New generic `getter` and `setter` for `na`-string (`obj_na_str` and `obj_na_str<-`, migrated from `rtables`).
  * `MatrixPrintForm` class now carries around `has_topleft` information explicitly, `getter` `mf_has_topleft`.
  * Number of header lines in a `MatrixPrintForm` object (`mf_nlheader`) is now a computed attribute rather than a stored one, `mf_nlheader<-` has been removed.
@@ -128,7 +129,7 @@
 ## formatters 0.3.4
  * `nlines` now accepts both `colwidths` and `max_width`, defaulting to `NULL` for both
  * `pag_indices_inner`, `find_pag` and `valid_pag` now accept `have_col_fnotes` and `div_height` arguments
- * fix bug which lead to [`insightsengineering/rtables#414`](https://github.com/insightsengineering/rtables/issues/414) (`nlines("", <non-null>)` threw an error
+ * fix bug which lead to [`pharmaverse/rtables#414`](https://github.com/pharmaverse/rtables/issues/414) (`nlines("", <non-null>)` threw an error
  * paginate related generics now accept max_width for use in ensuring pagination now takes word wrapping into account for titles and footers.
  * `nlines` character method has changed, not takes the sum of the `nlines` of its elements instead of the max in the case of a vector of length > 1
  * new `wrap_title_footer` function for use on everything which implements the generic interface we design.
@@ -156,7 +157,7 @@
  * `vert_pag_indices` now accepts `colwidths` argument
 
 ## formatters 0.3.2.5
- * `label_vars<-` now correctly adheres to names of value, even in different order than `names(x)`. Fixes [`insightsengineering/rlistings#8`](https://github.com/insightsengineering/rlistings/issues/8)
+ * `label_vars<-` now correctly adheres to names of value, even in different order than `names(x)`. Fixes [`pharmaverse/rlistings#8`](https://github.com/pharmaverse/rlistings/issues/8)
 
 ## formatters 0.3.2.4
  * `vert_pag_indices` now accepts `colwidths` argument
@@ -171,7 +172,7 @@
  * `vert_pag_indices` fixed to correctly take gap between printed columns into account
 
 ## formatters 0.3.2.1
- * calling `var_labels` on a data.frame with no columns is no longer an error ([`insightsengineering/rtables#224`](https://github.com/insightsengineering/rtables/issues/224))
+ * calling `var_labels` on a data.frame with no columns is no longer an error ([`pharmaverse/rtables#224`](https://github.com/pharmaverse/rtables/issues/224))
 
 ## formatters 0.3.2
  * Change warning when non-UTF line separator default is used to message, and displays it only during interactive sessions (once per session).

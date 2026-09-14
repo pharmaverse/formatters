@@ -1283,8 +1283,13 @@ reconstruct_basic_fnote_list <- function(mf) {
     empty_keycols <- !nzchar(tmp_strmat[-seq_len(nlh), ind_keycols, drop = FALSE][1, ])
 
     if (any(empty_keycols)) { # only if there are missing keycol labels
+      # actual column positions of the key columns that are empty on this page.
+      # `empty_keycols` is indexed relative to the key columns, so it must be
+      # mapped back onto the full column indices before subsetting/assigning
+      # (otherwise a shorter logical vector gets recycled across all columns).
+      empty_keycol_ind <- ind_keycols[empty_keycols]
       # find the first non-empty label in the key columns
-      keycols_needed <- mf_strings(mf)[, empty_keycols, drop = FALSE]
+      keycols_needed <- mf_strings(mf)[, empty_keycol_ind, drop = FALSE]
       first_nonempty <- apply(keycols_needed, 2, function(x) {
         section_ind <- i_mat[-seq_len(nlh)][1]
         sec_ind_no_header <- seq_len(section_ind)[-seq_len(nlh)]
@@ -1306,7 +1311,7 @@ reconstruct_basic_fnote_list <- function(mf) {
       }
 
       # replace the empty labels with the first non-empty label
-      tmp_strmat[nlh + 1, empty_keycols] <- unlist(first_nonempty)
+      tmp_strmat[nlh + 1, empty_keycol_ind] <- unlist(first_nonempty)
     }
   }
 

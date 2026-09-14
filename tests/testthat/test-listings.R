@@ -105,6 +105,17 @@ test_that("listings are correctly paginated when a wrapping happens on non-domin
   ))
   expect_silent(sapply(pgs, function(x) toString(x)))
 
+  # Regression test for #375: paginating a listing whose column count is not a
+  # multiple of the number of key columns must not emit a subscript-recycling
+  # warning (empty key-column indices must be mapped onto real column positions
+  # before subsetting). This listing has 3 columns and 2 key columns.
+  expect_silent(
+    formatters:::.mf_subset_core_mats(
+      lst, 4:6,
+      keycols = c("Species", "Petal.Width"), row = TRUE
+    )
+  )
+
   # for the reprinting of the start lines (keycols) when paginated: debug(formatters:::.mf_subset_core_mats)
 
   # Errors
