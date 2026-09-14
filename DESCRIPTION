@@ -20,9 +20,9 @@ Description: We provide a framework for rendering complex tables to ASCII,
     and a set of formatters for transforming values or sets of values into
     ASCII-ready display strings.
 License: Apache License 2.0
-URL: https://insightsengineering.github.io/formatters/,
-    https://github.com/insightsengineering/formatters/
-BugReports: https://github.com/insightsengineering/formatters/issues
+URL: https://pharmaverse.github.io/formatters/,
+    https://github.com/pharmaverse/formatters/
+BugReports: https://github.com/pharmaverse/formatters/issues
 Depends:
     methods,
     R (>= 3.6.3)
@@ -54,7 +54,6 @@ Encoding: UTF-8
 Language: en-US
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.3
 Collate:
     'data.R'
     'format_value.R'
@@ -68,3 +67,4 @@ Collate:
     'tostring.R'
     'utils.R'
     'zzz.R'
+Config/roxygen2/version: 8.1.0
