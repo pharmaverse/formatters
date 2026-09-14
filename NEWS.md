@@ -1,4 +1,4 @@
-## formatters 0.5.12.9003
+## formatters 0.5.13
 
 * Export `mf_col_widths` accessor (`getter` and `setter`).
 * Fixed a bug in listing pagination where the logical index of empty key columns was recycled across all columns, selecting the wrong columns for repeated key labels and (on recent R-devel) emitting a subscript-recycling warning that caused CRAN test failures.
