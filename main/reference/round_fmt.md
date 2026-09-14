@@ -12,10 +12,6 @@ valid_round_type
 round_fmt(x, digits, na_str = "NA", round_type = valid_round_type)
 ```
 
-## Format
-
-An object of class `character` of length 3.
-
 ## Arguments
 
 - x:

@@ -22,16 +22,13 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/insightsengineering/formatters/blob/main/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/pharmaverse/formatters/blob/main/DESCRIPTION)
 
 Becker G, Waddell A, Garolini D, de la Rua E, Zhu J (2026). *formatters:
 ASCII Formatting for Values and Tables*. R package version 0.5.12.9003,
-<https://insightsengineering.github.io/formatters/>.
+<https://pharmaverse.github.io/formatters/>.
 
-    @Manual{,
-      title = {formatters: ASCII Formatting for Values and Tables},
-      author = {Gabriel Becker and Adrian Waddell and Davide Garolini and Emily {de la Rua} and Joe Zhu},
-      year = {2026},
-      note = {R package version 0.5.12.9003},
-      url = {https://insightsengineering.github.io/formatters/},
-    }
+@Manual{, title = {formatters: ASCII Formatting for Values and Tables},
+author = {Gabriel Becker and Adrian Waddell and Davide Garolini and
+Emily {de la Rua} and Joe Zhu}, year = {2026}, note = {R package version
+0.5.12.9003}, url = {https://pharmaverse.github.io/formatters/}, }

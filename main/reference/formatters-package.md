@@ -6,12 +6,11 @@ Package to format tables and listings in a flexible way.
 
 Useful links:
 
-- <https://insightsengineering.github.io/formatters/>
+- <https://pharmaverse.github.io/formatters/>
 
-- <https://github.com/insightsengineering/formatters/>
+- <https://github.com/pharmaverse/formatters/>
 
-- Report bugs at
-  <https://github.com/insightsengineering/formatters/issues>
+- Report bugs at <https://github.com/pharmaverse/formatters/issues>
 
 ## Author
 
@@ -19,6 +18,9 @@ Useful links:
 ([ORCID](https://orcid.org/0000-0001-7566-2787))
 
 Authors:
+
+- Joe Zhu <joe.zhu@roche.com>
+  ([ORCID](https://orcid.org/0000-0001-7566-2787))
 
 - Gabriel Becker <gabembecker@gmail.com> (original creator of the
   package)

@@ -47,8 +47,8 @@ respectively.
 
 This function opens a PDF graphics device, writes to a temporary file,
 then utilizes
-[`grid::convertWidth()`](https://rdrr.io/r/grid/grid-defunct.html) and
-[`grid::convertHeight()`](https://rdrr.io/r/grid/grid-defunct.html) to
+[`grid::convertWidth()`](https://rdrr.io/r/grid/grid.convert.html) and
+[`grid::convertHeight()`](https://rdrr.io/r/grid/grid.convert.html) to
 calculate lines per inch and characters per inch for the specified font
 family, size, and line height.
 
