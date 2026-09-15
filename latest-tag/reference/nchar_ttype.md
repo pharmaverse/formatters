@@ -3,7 +3,7 @@
 This function returns the width of each element `x` *as a multiple of
 the width of the space character for in declared font*, rounded up to
 the nearest integer. This is used extensively in the text rendering
-([`toString()`](https://insightsengineering.github.io/formatters/reference/tostring.md))
+([`toString()`](https://pharmaverse.github.io/formatters/reference/tostring.md))
 and pagination machinery for calculating word wrapping, default column
 widths, lines per page, etc.
 
@@ -22,26 +22,26 @@ nchar_ttype(
 
 - x:
 
-  (`character`)  
+  (`character`)\
   the string(s) to calculate width(s) for.
 
 - fontspec:
 
-  (`font_spec` or `NULL`)  
+  (`font_spec` or `NULL`)\
   if non-NULL, the font to use for the calculations (as returned by
-  [`font_spec()`](https://insightsengineering.github.io/formatters/reference/font_spec.md)).
+  [`font_spec()`](https://pharmaverse.github.io/formatters/reference/font_spec.md)).
   Defaults to "Courier", which is a monospace font. If NULL, the width
   will be returned in number of characters by calling `nchar` directly.
 
 - tol:
 
-  (`numeric(1)`)  
+  (`numeric(1)`)\
   the tolerance to use when determining if a multiple needs to be
   rounded up to the next integer. See Details.
 
 - raw:
 
-  (`logical(1)`)  
+  (`logical(1)`)\
   whether unrounded widths should be returned. Defaults to `FALSE`.
 
 ## Details
@@ -60,7 +60,7 @@ multiple is less than `tol` above the last integer before it*. E.g., if
 
 ## See also
 
-[`font_spec()`](https://insightsengineering.github.io/formatters/reference/font_spec.md)
+[`font_spec()`](https://pharmaverse.github.io/formatters/reference/font_spec.md)
 
 ## Examples
 

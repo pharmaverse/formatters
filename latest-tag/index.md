@@ -1,35 +1,35 @@
 # formatters
 
 [![Check
-🛠](https://github.com/insightsengineering/formatters/actions/workflows/check.yaml/badge.svg)](https://insightsengineering.github.io/formatters/main/unit-test-report/)
+🛠](https://github.com/pharmaverse/formatters/actions/workflows/check.yaml/badge.svg)](https://pharmaverse.github.io/formatters/main/unit-test-report/)
 [![Docs
-📚](https://github.com/insightsengineering/formatters/actions/workflows/docs.yaml/badge.svg)](https://insightsengineering.github.io/formatters/)
+📚](https://github.com/pharmaverse/formatters/actions/workflows/docs.yaml/badge.svg)](https://pharmaverse.github.io/formatters/)
 [![Code Coverage
-📔](https://raw.githubusercontent.com/insightsengineering/formatters/_xml_coverage_reports/data/main/badge.svg)](https://insightsengineering.github.io/formatters/main/coverage-report/)
+📔](https://raw.githubusercontent.com/pharmaverse/formatters/_xml_coverage_reports/data/main/badge.svg)](https://pharmaverse.github.io/formatters/main/coverage-report/)
 
 ![GitHub
-forks](https://img.shields.io/github/forks/insightsengineering/formatters?style=social)![GitHub
+forks](https://img.shields.io/github/forks/pharmaverse/formatters?style=social)![GitHub
 repo
-stars](https://img.shields.io/github/stars/insightsengineering/formatters?style=social)
+stars](https://img.shields.io/github/stars/pharmaverse/formatters?style=social)
 
 ![GitHub commit
-activity](https://img.shields.io/github/commit-activity/m/insightsengineering/formatters)![GitHub
-contributors](https://img.shields.io/github/contributors/insightsengineering/formatters)![GitHub
+activity](https://img.shields.io/github/commit-activity/m/pharmaverse/formatters)![GitHub
+contributors](https://img.shields.io/github/contributors/pharmaverse/formatters)![GitHub
 last
-commit](https://img.shields.io/github/last-commit/insightsengineering/formatters)![GitHub
+commit](https://img.shields.io/github/last-commit/pharmaverse/formatters)![GitHub
 pull
-requests](https://img.shields.io/github/issues-pr/insightsengineering/formatters)![GitHub
+requests](https://img.shields.io/github/issues-pr/pharmaverse/formatters)![GitHub
 repo
-size](https://img.shields.io/github/repo-size/insightsengineering/formatters)![GitHub
+size](https://img.shields.io/github/repo-size/pharmaverse/formatters)![GitHub
 language
-count](https://img.shields.io/github/languages/count/insightsengineering/formatters)[![Project
+count](https://img.shields.io/github/languages/count/pharmaverse/formatters)[![Project
 Status: Active – The project has reached a stable, usable state and is
 being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Current
-Version](https://img.shields.io/github/r-package/v/insightsengineering/formatters/main?color=purple&label=package%20version)](https://github.com/insightsengineering/formatters/tree/main)
+Version](https://img.shields.io/github/r-package/v/pharmaverse/formatters/main?color=purple&label=package%20version)](https://github.com/pharmaverse/formatters/tree/main)
 [![Open
-Issues](https://img.shields.io/github/issues-raw/insightsengineering/formatters?color=red&label=open%20issues)](https://github.com/insightsengineering/formatters/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)
+Issues](https://img.shields.io/github/issues-raw/pharmaverse/formatters?color=red&label=open%20issues)](https://github.com/pharmaverse/formatters/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)
 
 The `formatters` package provides two core pieces of functionality, both
 related to ASCII rendering:
@@ -53,25 +53,20 @@ length 1, 2 or – occasionally – 3.
 `formatters` is available on CRAN and you can install the latest
 released version with:
 
-``` r
-install.packages("formatters")
-```
+[`install.packages`](https://rdrr.io/r/utils/install.packages.html)`(``"formatters"``)`
 
 or you can install the latest development version directly from GitHub
 with:
 
-``` r
-# install.packages("pak")
-pak::pak("insightsengineering/formatters")
-```
+`# install.packages("pak")`` ``pak``::`[`pak`](https://pak.r-lib.org/reference/pak.html)`(``"pharmaverse/formatters"``)`
 
 Packaged releases (both those on CRAN and those between official CRAN
 releases) can be found in the [releases
-list](https://github.com/insightsengineering/formatters/releases).
+list](https://github.com/pharmaverse/formatters/releases).
 
 To understand how to use this package, please refer to the [Introduction
 to
-`formatters`](https://insightsengineering.github.io/formatters/latest-tag/articles/formatters.html)
+`formatters`](https://pharmaverse.github.io/formatters/latest-tag/articles/formatters.html)
 article, which provides multiple examples of code implementation.
 
 ## Format labels

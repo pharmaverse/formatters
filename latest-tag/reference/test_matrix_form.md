@@ -32,12 +32,12 @@ basic_listing_mf(
 
 - df:
 
-  (`data.frame`)  
+  (`data.frame`)\
   a data frame.
 
 - indent_rownames:
 
-  (`flag`)  
+  (`flag`)\
   whether row names should be indented. Being this used for testing
   purposes, it defaults to `FALSE`. If `TRUE`, it assigns label rows on
   even lines (also format is `"-"` and value strings are `""`).
@@ -46,64 +46,64 @@ basic_listing_mf(
 
 - parent_path:
 
-  (`string`)  
+  (`string`)\
   parent path that all rows should be "children of". Defaults to `NULL`,
   as usually this is not needed. It may be necessary to use `"root"`,
   for some specific scenarios.
 
 - ignore_rownames:
 
-  (`flag`)  
+  (`flag`)\
   whether row names should be ignored.
 
 - add_decoration:
 
-  (`flag`)  
+  (`flag`)\
   whether adds title and footer decorations should be added to the
   matrix form.
 
 - fontspec:
 
-  (`font_spec`)  
+  (`font_spec`)\
   a font_spec object specifying the font information to use for
   calculating string widths and heights, as returned by
-  [`font_spec()`](https://insightsengineering.github.io/formatters/reference/font_spec.md).
+  [`font_spec()`](https://pharmaverse.github.io/formatters/reference/font_spec.md).
 
 - split_labels:
 
-  (`string`)  
+  (`string`)\
   indicates which column to use as split labels. If `NULL`, no split
   labels are used.
 
 - data_labels:
 
-  (`string`)  
+  (`string`)\
   indicates which column to use as data labels. It is ignored if no
   `split_labels` is present and is automatically assigned to
   `"Analysis method"` when `split_labels` is present, but `data_labels`
   is `NULL`. Its direct column name is used as node name in `"DataRow"`
   pathing. See
-  [`mf_rinfo()`](https://insightsengineering.github.io/formatters/reference/mpf_accessors.md)
+  [`mf_rinfo()`](https://pharmaverse.github.io/formatters/reference/mpf_accessors.md)
   for more information.
 
 - num_rep_cols:
 
-  (`numeric(1)`)  
+  (`numeric(1)`)\
   Number of columns to be treated as repeating columns. Defaults to `0`
   for `basic_matrix_form` and `length(keycols)` for `basic_listing_mf`.
   Note repeating columns are separate from row labels if present.
 
 - round_type:
 
-  (`string`)  
+  (`string`)\
   The type of rounding to perform. Allowed values: (`"iec"`, `"iec_mod"`
   or `"sas"`) See
-  [`round_fmt()`](https://insightsengineering.github.io/formatters/reference/round_fmt.md)
+  [`round_fmt()`](https://pharmaverse.github.io/formatters/reference/round_fmt.md)
   for details.
 
 - keycols:
 
-  (`character`)  
+  (`character`)\
   a vector of `df` column names that are printed first and for which
   repeated values are assigned `""`. This format is characteristic of a
   listing matrix form.
@@ -119,7 +119,7 @@ ready for ASCII rendering.
 ## Details
 
 If some of the column has a
-[obj_format](https://insightsengineering.github.io/formatters/reference/lab_name.md)
+[obj_format](https://pharmaverse.github.io/formatters/reference/lab_name.md)
 assigned, it will be respected for all column values except for label
 rows, if present (see parameter `split_labels`).
 

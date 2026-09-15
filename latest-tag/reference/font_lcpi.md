@@ -17,26 +17,26 @@ font_lcpi(
 
 - font_family:
 
-  (`string`)  
+  (`string`)\
   name of a font family. An error will be thrown if the family named is
   not monospaced. Defaults to `"Courier"`.
 
 - font_size:
 
-  (`numeric(1)`)  
+  (`numeric(1)`)\
   font size. Defaults to `12`.
 
 - lineheight:
 
-  (`numeric(1)`)  
+  (`numeric(1)`)\
   line height. Defaults to `1`.
 
 - fontspec:
 
-  (`font_spec`)  
+  (`font_spec`)\
   a font_spec object specifying the font information to use for
   calculating string widths and heights, as returned by
-  [`font_spec()`](https://insightsengineering.github.io/formatters/reference/font_spec.md).
+  [`font_spec()`](https://pharmaverse.github.io/formatters/reference/font_spec.md).
 
 ## Value
 
@@ -47,8 +47,8 @@ respectively.
 
 This function opens a PDF graphics device, writes to a temporary file,
 then utilizes
-[`grid::convertWidth()`](https://rdrr.io/r/grid/grid-defunct.html) and
-[`grid::convertHeight()`](https://rdrr.io/r/grid/grid-defunct.html) to
+[`grid::convertWidth()`](https://rdrr.io/r/grid/grid.convert.html) and
+[`grid::convertHeight()`](https://rdrr.io/r/grid/grid.convert.html) to
 calculate lines per inch and characters per inch for the specified font
 family, size, and line height.
 

@@ -27,19 +27,19 @@ obj_round_type(obj) <- value
 
 - obj:
 
-  (`ANY`)  
+  (`ANY`)\
   a table-like object.
 
 - value:
 
   The new rounding type of the object (see
-  [`round_fmt()`](https://insightsengineering.github.io/formatters/reference/round_fmt.md)
+  [`round_fmt()`](https://pharmaverse.github.io/formatters/reference/round_fmt.md)
   for details)
 
 ## Value
 
 The rounding type of the object (see
-[`round_fmt()`](https://insightsengineering.github.io/formatters/reference/round_fmt.md)
+[`round_fmt()`](https://pharmaverse.github.io/formatters/reference/round_fmt.md)
 for details).
 
 ## Note

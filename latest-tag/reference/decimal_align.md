@@ -13,12 +13,12 @@ decimal_align(string_mat, align_mat)
 
 - string_mat:
 
-  (`character matrix`)  
+  (`character matrix`)\
   "string" matrix component of `MatrixPrintForm` object.
 
 - align_mat:
 
-  (`character matrix`)  
+  (`character matrix`)\
   "aligns" matrix component of `MatrixPrintForm` object. Should contain
   either `dec_left`, `dec_right`, or `decimal` for values to be decimal
   aligned.
@@ -39,8 +39,8 @@ when decimal alignment is used.
 
 ## See also
 
-[`toString()`](https://insightsengineering.github.io/formatters/reference/tostring.md),
-[`MatrixPrintForm()`](https://insightsengineering.github.io/formatters/reference/MatrixPrintForm.md)
+[`toString()`](https://pharmaverse.github.io/formatters/reference/tostring.md),
+[`MatrixPrintForm()`](https://pharmaverse.github.io/formatters/reference/MatrixPrintForm.md)
 
 ## Examples
 

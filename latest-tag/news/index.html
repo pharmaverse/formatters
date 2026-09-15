@@ -13,11 +13,11 @@
 <link rel="icon" sizes="any" href="../favicon.ico">
 <link rel="manifest" href="../site.webmanifest">
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
+<link href="../deps/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Changelog">
-<meta property="og:image" content="https://insightsengineering.github.io/formatters/logo.svg">
+<meta property="og:image" content="https://pharmaverse.github.io/formatters/logo.svg">
 <link rel="stylesheet" href="../consent.css">
 <script src="../consent.js" type="text/javascript" charset="utf-8"></script>
 </head>
@@ -29,7 +29,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">formatters</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.5.12</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.5.13</small>
 
     <div style="width: 140px; margin-left: 0.5rem;"> <small class="nav-text text-muted me-auto">part of</small> <img src="https://github.com/insightsengineering/hex-stickers/blob/main/PNG/nest.png?raw=true" alt="NEST" style="height: 30px;"><a href="https://pharmaverse.org/" class="external-link"><img src="https://github.com/insightsengineering/hex-stickers/blob/main/PNG/pharmaverse.png?raw=true" alt="pharmaverse" style="height: 28px;"></a> </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,6 +55,7 @@
     <a class="dropdown-item" data-toggle="tooltip" title="" href="https://pharmaverse.github.io/formatters/release-candidate">release-candidate</a>
 <a class="dropdown-item" data-toggle="tooltip" title="" href="https://pharmaverse.github.io/formatters/main">main</a>
 <a class="dropdown-item" data-toggle="tooltip" title="" href="https://pharmaverse.github.io/formatters/latest-tag">latest-tag</a>
+<a class="dropdown-item" data-toggle="tooltip" title="" href="https://pharmaverse.github.io/formatters/v0.5.13">v0.5.13</a>
 <a class="dropdown-item" data-toggle="tooltip" title="" href="https://pharmaverse.github.io/formatters/v0.5.12">v0.5.12</a>
 <a class="dropdown-item" data-toggle="tooltip" title="" href="https://pharmaverse.github.io/formatters/v0.5.11">v0.5.11</a>
 <a class="dropdown-item" data-toggle="tooltip" title="" href="https://pharmaverse.github.io/formatters/v0.5.11-rc3">v0.5.11-rc3</a>
@@ -87,7 +88,7 @@
 <li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json">
 </form></li>
-<li class="nav-item"><a class="external-link nav-link" href="https://github.com/insightsengineering/formatters"><span class="fa fa-github"></span></a></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/pharmaverse/formatters"><span class="fa fa-github"></span></a></li>
       </ul>
 </div>
 
@@ -97,12 +98,21 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.svg" class="logo" alt=""><h1>Changelog</h1>
-      <small>Source: <a href="https://github.com/insightsengineering/formatters/blob/v0.5.12/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
+      <small>Source: <a href="https://github.com/pharmaverse/formatters/blob/v0.5.13/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
     <div class="section level2">
+<h2 class="pkg-version" data-toc-text="0.5.13" id="formatters-0513">formatters 0.5.13<a class="anchor" aria-label="anchor" href="#formatters-0513"></a>
+</h2>
+<ul>
+<li>Export <code>mf_col_widths</code> accessor (<code>getter</code> and <code>setter</code>).</li>
+<li>Fixed a bug in listing pagination where the logical index of empty key columns was recycled across all columns, selecting the wrong columns for repeated key labels and (on recent R-devel) emitting a subscript-recycling warning that caused CRAN test failures.</li>
+</ul>
+</div>
+    <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.5.12" id="formatters-0512">formatters 0.5.12<a class="anchor" aria-label="anchor" href="#formatters-0512"></a>
 </h2>
+<p class="text-muted">CRAN release: 2025-12-08</p>
 <ul>
 <li>Added <code>"default"</code> format label which behaves like <code>"xx"</code> in <code>format_value</code> but indicates formatting behavior can be inherited from parent structures in upstream code.</li>
 <li>
@@ -149,7 +159,7 @@
 <p class="text-muted">CRAN release: 2024-06-19</p>
 <ul>
 <li>Added <code>TrueType</code> font support to pagination and word-wrapping machinery by <a href="https://github.com/gmbecker" class="external-link">@gmbecker</a>.</li>
-<li>Fixed a bug where <code>col_gap</code> was not correctly taken into account during horizontal pagination (<a href="https://github.com/insightsengineering/formatters/issues/249" class="external-link">#249</a>) by <a href="https://github.com/gmbecker" class="external-link">@gmbecker</a>.</li>
+<li>Fixed a bug where <code>col_gap</code> was not correctly taken into account during horizontal pagination (<a href="https://github.com/pharmaverse/formatters/issues/249" class="external-link">#249</a>) by <a href="https://github.com/gmbecker" class="external-link">@gmbecker</a>.</li>
 <li>Improved clarity of error messages returned by <code>format_value</code>.</li>
 </ul>
 </div>
@@ -169,7 +179,7 @@
 <ul>
 <li>Added “N=xx” format and unit test for it.</li>
 <li>Added error catch for <code>\r</code> recursive special character.</li>
-<li>Fixed pagination unexpected counts for <code>rlistings</code>’ pagination by removing the manual subsetting workaround and fixing <a href="https://github.com/insightsengineering/rlistings/issues/155" class="external-link"><code>insightsengineering/rlistings#155</code></a>.</li>
+<li>Fixed pagination unexpected counts for <code>rlistings</code>’ pagination by removing the manual subsetting workaround and fixing <a href="https://github.com/pharmaverse/rlistings/issues/155" class="external-link"><code>pharmaverse/rlistings#155</code></a>.</li>
 <li>Fixed mismatch between pagination and exports regarding the value assigned to parameter <code>max_width</code>. Introduced general handler <code>.handle_max_width</code> for pagination, exports, and <code>toString</code>.</li>
 <li>Fixed bug in <code>format_value</code> causing a warning for vectors containing both NA and non-NA values.</li>
 <li>Fixed issue with <code>var_label</code> assignment that needed to be of non-named strings.</li>
@@ -200,7 +210,7 @@
 <h2 class="pkg-version" data-toc-text="0.5.4" id="formatters-054">formatters 0.5.4<a class="anchor" aria-label="anchor" href="#formatters-054"></a>
 </h2>
 <ul>
-<li>Fixed a bug in <code><a href="../reference/paginate_indices.html">paginate_to_mpfs()</a></code> so that formatting in listings key columns is retained with pagination <a href="https://github.com/insightsengineering/rlistings/issues/155" class="external-link"><code>insightsengineering/rlistings#155</code></a>.</li>
+<li>Fixed a bug in <code><a href="../reference/paginate_indices.html">paginate_to_mpfs()</a></code> so that formatting in listings key columns is retained with pagination <a href="https://github.com/pharmaverse/rlistings/issues/155" class="external-link"><code>pharmaverse/rlistings#155</code></a>.</li>
 <li>Improved error message for pagination when <code>cpp</code> or <code>lpp</code> is too small in comparison to the column or row widths.</li>
 <li>Added full support of newline characters in any part of <code>rtables</code> objects.</li>
 <li>Modified default vertical alignment for top left information to bottom.</li>
@@ -227,7 +237,7 @@
 <li>Updated <code>export_as_txt</code> to pass <code>rep_cols</code> argument to pagination function.</li>
 <li>Added <code><a href="../reference/list_formats.html">list_valid_aligns()</a></code> that lists the available alignments.</li>
 <li>Set default values for <code>na_str</code> and <code>align</code> to <code>NULL</code> in the format configuration function <code>fmt_config</code>.</li>
-<li>Fixed a bug that threw warning when <code>prov_footer</code> length is greater than <code>1</code> <a href="https://github.com/insightsengineering/rtables/issues/705" class="external-link"><code>insightsengineering/rtables#705</code></a>.</li>
+<li>Fixed a bug that threw warning when <code>prov_footer</code> length is greater than <code>1</code> <a href="https://github.com/pharmaverse/rtables/issues/705" class="external-link"><code>pharmaverse/rtables#705</code></a>.</li>
 </ul>
 </div>
     <div class="section level2">
@@ -246,7 +256,7 @@
 </h2>
 <p class="text-muted">CRAN release: 2023-05-25</p>
 <ul>
-<li>Fix bug in <code>MPF</code> pagination (and thus export_as_txt) when column labels had newlines (<a href="https://github.com/insightsengineering/formatters/issues/150" class="external-link">#150</a>, <a href="https://github.com/insightsengineering/rtables/issues/634" class="external-link"><code>insightsengineering/rtables#634</code></a>)</li>
+<li>Fix bug in <code>MPF</code> pagination (and thus export_as_txt) when column labels had newlines (<a href="https://github.com/pharmaverse/formatters/issues/150" class="external-link">#150</a>, <a href="https://github.com/pharmaverse/rtables/issues/634" class="external-link"><code>pharmaverse/rtables#634</code></a>)</li>
 <li>
 <code>font_size</code> is now 8 consistently across the pagination machinery.</li>
 <li>When specified, margins are in inches (including the default).</li>
@@ -272,7 +282,7 @@
 <p class="text-muted">CRAN release: 2023-03-02</p>
 <ul>
 <li>Cell values and row labels are now word-wrapped based on column widths (<code>widths</code> in <code>toString</code> and <code>colwidths</code> in pagination and exporters.</li>
-<li>New “N=xx (xx%)” format support (<a href="https://github.com/insightsengineering/rtables/issues/516" class="external-link uri">https://github.com/insightsengineering/rtables/issues/516</a>).</li>
+<li>New “N=xx (xx%)” format support (<a href="https://github.com/pharmaverse/rtables/issues/516" class="external-link uri">https://github.com/pharmaverse/rtables/issues/516</a>).</li>
 <li>New generic <code>getter</code> and <code>setter</code> for <code>na</code>-string (<code>obj_na_str</code> and <code>obj_na_str&lt;-</code>, migrated from <code>rtables</code>).</li>
 <li>
 <code>MatrixPrintForm</code> class now carries around <code>has_topleft</code> information explicitly, <code>getter</code> <code>mf_has_topleft</code>.</li>
@@ -284,11 +294,11 @@
 <code>vert_pag_indices</code> now accepts <code>rep_cols</code> to control how many columns act as ‘row-label-like’, as required by <code>rlistings</code>.</li>
 <li>Documentation of pagination algorithm greatly expanded.</li>
 <li>Pagination with <code>verbose = TRUE</code> is now significantly more informative.</li>
-<li>fix bug where indenting was not correct when row-labels were word wrapped (<a href="https://github.com/insightsengineering/formatters/issues/84" class="external-link">#84</a>, <a href="https://github.com/insightsengineering/formatters/issues/85" class="external-link">#85</a>).</li>
-<li>fix bug where portions of table after last section div (e.g., non-nested further analyses) were omitted (<a href="https://github.com/insightsengineering/formatters/issues/77" class="external-link">#77</a>).</li>
+<li>fix bug where indenting was not correct when row-labels were word wrapped (<a href="https://github.com/pharmaverse/formatters/issues/84" class="external-link">#84</a>, <a href="https://github.com/pharmaverse/formatters/issues/85" class="external-link">#85</a>).</li>
+<li>fix bug where portions of table after last section div (e.g., non-nested further analyses) were omitted (<a href="https://github.com/pharmaverse/formatters/issues/77" class="external-link">#77</a>).</li>
 <li>fix bug in <code>mf_rinfo&lt;-</code> checked the new value against the wrong dimensions.</li>
 <li>Fixed off-by-one error in basic pagination machinery.</li>
-<li>Fix bug in position of header separator when columns have word wrapping (<a href="https://github.com/insightsengineering/formatters/issues/68" class="external-link">#68</a>).</li>
+<li>Fix bug in position of header separator when columns have word wrapping (<a href="https://github.com/pharmaverse/formatters/issues/68" class="external-link">#68</a>).</li>
 <li>Bug rendering <code>mf_lgrouping</code> non-functional has been fixed.</li>
 </ul>
 </div>
@@ -300,7 +310,7 @@
 <code>nlines</code> now accepts both <code>colwidths</code> and <code>max_width</code>, defaulting to <code>NULL</code> for both</li>
 <li>
 <code>pag_indices_inner</code>, <code>find_pag</code> and <code>valid_pag</code> now accept <code>have_col_fnotes</code> and <code>div_height</code> arguments</li>
-<li>fix bug which lead to <a href="https://github.com/insightsengineering/rtables/issues/414" class="external-link"><code>insightsengineering/rtables#414</code></a> (<code>nlines("", &lt;non-null&gt;)</code> threw an error</li>
+<li>fix bug which lead to <a href="https://github.com/pharmaverse/rtables/issues/414" class="external-link"><code>pharmaverse/rtables#414</code></a> (<code>nlines("", &lt;non-null&gt;)</code> threw an error</li>
 <li>paginate related generics now accept max_width for use in ensuring pagination now takes word wrapping into account for titles and footers.</li>
 <li>
 <code>nlines</code> character method has changed, not takes the sum of the <code>nlines</code> of its elements instead of the max in the case of a vector of length &gt; 1</li>
@@ -346,7 +356,7 @@
 </h2>
 <ul>
 <li>
-<code>label_vars&lt;-</code> now correctly adheres to names of value, even in different order than <code>names(x)</code>. Fixes <a href="https://github.com/insightsengineering/rlistings/issues/8" class="external-link"><code>insightsengineering/rlistings#8</code></a>
+<code>label_vars&lt;-</code> now correctly adheres to names of value, even in different order than <code>names(x)</code>. Fixes <a href="https://github.com/pharmaverse/rlistings/issues/8" class="external-link"><code>pharmaverse/rlistings#8</code></a>
 </li>
 </ul>
 </div>
@@ -382,7 +392,7 @@
 <h2 class="pkg-version" data-toc-text="0.3.2.1" id="formatters-0321">formatters 0.3.2.1<a class="anchor" aria-label="anchor" href="#formatters-0321"></a>
 </h2>
 <ul>
-<li>calling <code>var_labels</code> on a data.frame with no columns is no longer an error (<a href="https://github.com/insightsengineering/rtables/issues/224" class="external-link"><code>insightsengineering/rtables#224</code></a>)</li>
+<li>calling <code>var_labels</code> on a data.frame with no columns is no longer an error (<a href="https://github.com/pharmaverse/rtables/issues/224" class="external-link"><code>pharmaverse/rtables#224</code></a>)</li>
 </ul>
 </div>
     <div class="section level2">
@@ -409,7 +419,7 @@
 <li>format_value now respects <code>na_str</code> even when format is <code>xx</code> (previously it returned <code>"NA"</code> always)</li>
 <li>rename <code>linesep</code> argument to <code>hsep</code> in <code>toString</code> generic signature</li>
 <li>add <code>indent_size</code> argument to <code>matrix_form</code> generic signature</li>
-<li>add a number of <code>"__ (__)"</code> (no pct) formats in response to <a href="https://github.com/insightsengineering/formatters/issues/23" class="external-link">#23</a>
+<li>add a number of <code>"__ (__)"</code> (no pct) formats in response to <a href="https://github.com/pharmaverse/formatters/issues/23" class="external-link">#23</a>
 </li>
 <li>Switch to <code>testthat</code> as testing framework</li>
 </ul>
@@ -435,7 +445,7 @@
 <h2 class="pkg-version" data-toc-text="0.1.0.0002" id="formatters-0100002">formatters 0.1.0.0002<a class="anchor" aria-label="anchor" href="#formatters-0100002"></a>
 </h2>
 <ul>
-<li>Add <code>formats</code> argument to matrix_form informal class/constructor for use in <code><a href="https://insightsengineering.github.io/rtables/latest-tag/reference/table_shell.html" class="external-link">rtables::table_shell</a></code>
+<li>Add <code>formats</code> argument to matrix_form informal class/constructor for use in <code><a href="https://rdrr.io/pkg/rtables/man/table_shell.html" class="external-link">rtables::table_shell</a></code>
 </li>
 </ul>
 </div>

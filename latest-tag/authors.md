@@ -2,7 +2,7 @@
 
 ## Authors
 
-- **Gabriel Becker**. Author.  
+- **Gabriel Becker**. Author.\
   original creator of the package
 
 - **Adrian Waddell**. Author.
@@ -22,16 +22,13 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/insightsengineering/formatters/blob/v0.5.12/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/pharmaverse/formatters/blob/v0.5.13/DESCRIPTION)
 
-Becker G, Waddell A, Garolini D, de la Rua E, Zhu J (2025). *formatters:
-ASCII Formatting for Values and Tables*. R package version 0.5.12,
-<https://insightsengineering.github.io/formatters/>.
+Becker G, Waddell A, Garolini D, de la Rua E, Zhu J (2026). *formatters:
+ASCII Formatting for Values and Tables*. R package version 0.5.13,
+<https://pharmaverse.github.io/formatters/>.
 
-    @Manual{,
-      title = {formatters: ASCII Formatting for Values and Tables},
-      author = {Gabriel Becker and Adrian Waddell and Davide Garolini and Emily {de la Rua} and Joe Zhu},
-      year = {2025},
-      note = {R package version 0.5.12},
-      url = {https://insightsengineering.github.io/formatters/},
-    }
+@Manual{, title = {formatters: ASCII Formatting for Values and Tables},
+author = {Gabriel Becker and Adrian Waddell and Davide Garolini and
+Emily {de la Rua} and Joe Zhu}, year = {2026}, note = {R package version
+0.5.13}, url = {https://pharmaverse.github.io/formatters/}, }

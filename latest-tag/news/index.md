@@ -1,6 +1,16 @@
 # Changelog
 
+## formatters 0.5.13
+
+- Export `mf_col_widths` accessor (`getter` and `setter`).
+- Fixed a bug in listing pagination where the logical index of empty key
+  columns was recycled across all columns, selecting the wrong columns
+  for repeated key labels and (on recent R-devel) emitting a
+  subscript-recycling warning that caused CRAN test failures.
+
 ## formatters 0.5.12
+
+CRAN release: 2025-12-08
 
 - Added `"default"` format label which behaves like `"xx"` in
   `format_value` but indicates formatting behavior can be inherited from
@@ -59,8 +69,8 @@ CRAN release: 2024-06-19
   machinery by [@gmbecker](https://github.com/gmbecker).
 - Fixed a bug where `col_gap` was not correctly taken into account
   during horizontal pagination
-  ([\#249](https://github.com/insightsengineering/formatters/issues/249))
-  by [@gmbecker](https://github.com/gmbecker).
+  ([\#249](https://github.com/pharmaverse/formatters/issues/249)) by
+  [@gmbecker](https://github.com/gmbecker).
 - Improved clarity of error messages returned by `format_value`.
 
 ## formatters 0.5.7
@@ -69,7 +79,7 @@ CRAN release: 2024-06-19
 - Fixed a bug causing recursive appending of page number text during
   pagination.
 - Deprecated `width`, `height` and `fontsize` arguments of
-  [`export_as_pdf()`](https://insightsengineering.github.io/formatters/reference/export_as_pdf.md)
+  [`export_as_pdf()`](https://pharmaverse.github.io/formatters/reference/export_as_pdf.md)
   using `lifecycle` package.
 
 ## formatters 0.5.6
@@ -80,7 +90,7 @@ CRAN release: 2024-04-15
 - Added error catch for `\r` recursive special character.
 - Fixed pagination unexpected counts for `rlistings`’ pagination by
   removing the manual subsetting workaround and fixing
-  [`insightsengineering/rlistings#155`](https://github.com/insightsengineering/rlistings/issues/155).
+  [`pharmaverse/rlistings#155`](https://github.com/pharmaverse/rlistings/issues/155).
 - Fixed mismatch between pagination and exports regarding the value
   assigned to parameter `max_width`. Introduced general handler
   `.handle_max_width` for pagination, exports, and `toString`.
@@ -110,7 +120,7 @@ CRAN release: 2023-12-06
 - Applied `styler` and resolved package lint. Changed default
   indentation from 4 spaces to 2.
 - Added the possibility of setting a general default using
-  [`set_default_hsep()`](https://insightsengineering.github.io/formatters/reference/default_horizontal_sep.md)
+  [`set_default_hsep()`](https://pharmaverse.github.io/formatters/reference/default_horizontal_sep.md)
   that sets up the option `getOption("formatters_default_hsep")`.
 - Allowed section divider between header and table body.
 - Added support for combining duplicate referential footnotes.
@@ -124,9 +134,9 @@ CRAN release: 2023-12-06
 ## formatters 0.5.4
 
 - Fixed a bug in
-  [`paginate_to_mpfs()`](https://insightsengineering.github.io/formatters/reference/paginate_indices.md)
+  [`paginate_to_mpfs()`](https://pharmaverse.github.io/formatters/reference/paginate_indices.md)
   so that formatting in listings key columns is retained with pagination
-  [`insightsengineering/rlistings#155`](https://github.com/insightsengineering/rlistings/issues/155).
+  [`pharmaverse/rlistings#155`](https://github.com/pharmaverse/rlistings/issues/155).
 - Improved error message for pagination when `cpp` or `lpp` is too small
   in comparison to the column or row widths.
 - Added full support of newline characters in any part of `rtables`
@@ -153,13 +163,13 @@ CRAN release: 2023-08-25
 - Updated `export_as_txt` to pass `rep_cols` argument to pagination
   function.
 - Added
-  [`list_valid_aligns()`](https://insightsengineering.github.io/formatters/reference/list_formats.md)
+  [`list_valid_aligns()`](https://pharmaverse.github.io/formatters/reference/list_formats.md)
   that lists the available alignments.
 - Set default values for `na_str` and `align` to `NULL` in the format
   configuration function `fmt_config`.
 - Fixed a bug that threw warning when `prov_footer` length is greater
   than `1`
-  [`insightsengineering/rtables#705`](https://github.com/insightsengineering/rtables/issues/705).
+  [`pharmaverse/rtables#705`](https://github.com/pharmaverse/rtables/issues/705).
 
 ## formatters 0.5.1
 
@@ -180,8 +190,8 @@ CRAN release: 2023-05-25
 
 - Fix bug in `MPF` pagination (and thus export_as_txt) when column
   labels had newlines
-  ([\#150](https://github.com/insightsengineering/formatters/issues/150),
-  [`insightsengineering/rtables#634`](https://github.com/insightsengineering/rtables/issues/634))
+  ([\#150](https://github.com/pharmaverse/formatters/issues/150),
+  [`pharmaverse/rtables#634`](https://github.com/pharmaverse/rtables/issues/634))
 - `font_size` is now 8 consistently across the pagination machinery.
 - When specified, margins are in inches (including the default).
 - Fix off-by-one error in pagination machinery for certain cases.
@@ -216,7 +226,7 @@ CRAN release: 2023-03-02
 - Cell values and row labels are now word-wrapped based on column widths
   (`widths` in `toString` and `colwidths` in pagination and exporters.
 - New “N=xx (xx%)” format support
-  (<https://github.com/insightsengineering/rtables/issues/516>).
+  (<https://github.com/pharmaverse/rtables/issues/516>).
 - New generic `getter` and `setter` for `na`-string (`obj_na_str` and
   `obj_na_str<-`, migrated from `rtables`).
 - `MatrixPrintForm` class now carries around `has_topleft` information
@@ -236,18 +246,17 @@ CRAN release: 2023-03-02
 - Pagination with `verbose = TRUE` is now significantly more
   informative.
 - fix bug where indenting was not correct when row-labels were word
-  wrapped
-  ([\#84](https://github.com/insightsengineering/formatters/issues/84),
-  [\#85](https://github.com/insightsengineering/formatters/issues/85)).
+  wrapped ([\#84](https://github.com/pharmaverse/formatters/issues/84),
+  [\#85](https://github.com/pharmaverse/formatters/issues/85)).
 - fix bug where portions of table after last section div (e.g.,
   non-nested further analyses) were omitted
-  ([\#77](https://github.com/insightsengineering/formatters/issues/77)).
+  ([\#77](https://github.com/pharmaverse/formatters/issues/77)).
 - fix bug in `mf_rinfo<-` checked the new value against the wrong
   dimensions.
 - Fixed off-by-one error in basic pagination machinery.
 - Fix bug in position of header separator when columns have word
   wrapping
-  ([\#68](https://github.com/insightsengineering/formatters/issues/68)).
+  ([\#68](https://github.com/pharmaverse/formatters/issues/68)).
 - Bug rendering `mf_lgrouping` non-functional has been fixed.
 
 ## formatters 0.3.4
@@ -257,7 +266,7 @@ CRAN release: 2023-03-02
 - `pag_indices_inner`, `find_pag` and `valid_pag` now accept
   `have_col_fnotes` and `div_height` arguments
 - fix bug which lead to
-  [`insightsengineering/rtables#414`](https://github.com/insightsengineering/rtables/issues/414)
+  [`pharmaverse/rtables#414`](https://github.com/pharmaverse/rtables/issues/414)
   (`nlines("", <non-null>)` threw an error
 - paginate related generics now accept max_width for use in ensuring
   pagination now takes word wrapping into account for titles and
@@ -304,7 +313,7 @@ CRAN release: 2023-03-02
 
 - `label_vars<-` now correctly adheres to names of value, even in
   different order than `names(x)`. Fixes
-  [`insightsengineering/rlistings#8`](https://github.com/insightsengineering/rlistings/issues/8)
+  [`pharmaverse/rlistings#8`](https://github.com/pharmaverse/rlistings/issues/8)
 
 ## formatters 0.3.2.4
 
@@ -328,7 +337,7 @@ CRAN release: 2023-03-02
 
 - calling `var_labels` on a data.frame with no columns is no longer an
   error
-  ([`insightsengineering/rtables#224`](https://github.com/insightsengineering/rtables/issues/224))
+  ([`pharmaverse/rtables#224`](https://github.com/pharmaverse/rtables/issues/224))
 
 ## formatters 0.3.2
 
@@ -352,7 +361,7 @@ CRAN release: 2022-05-20
 - rename `linesep` argument to `hsep` in `toString` generic signature
 - add `indent_size` argument to `matrix_form` generic signature
 - add a number of `"__ (__)"` (no pct) formats in response to
-  [\#23](https://github.com/insightsengineering/formatters/issues/23)
+  [\#23](https://github.com/pharmaverse/formatters/issues/23)
 - Switch to `testthat` as testing framework
 
 ## formatters 0.2.0
@@ -370,4 +379,4 @@ CRAN release: 2022-03-29
 
 - Add `formats` argument to matrix_form informal class/constructor for
   use in
-  [`rtables::table_shell`](https://insightsengineering.github.io/rtables/latest-tag/reference/table_shell.html)
+  [`rtables::table_shell`](https://rdrr.io/pkg/rtables/man/table_shell.html)

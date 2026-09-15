@@ -12,18 +12,18 @@ spread_integer(x, len)
 
 - x:
 
-  (`integer(1)`)  
+  (`integer(1)`)\
   number to spread.
 
 - len:
 
-  (`integer(1)`)  
+  (`integer(1)`)\
   number of times to repeat `x`.
 
 ## Value
 
 If `x` is a scalar whole number value (see
-[`is.wholenumber()`](https://insightsengineering.github.io/formatters/reference/is.wholenumber.md)),
+[`is.wholenumber()`](https://pharmaverse.github.io/formatters/reference/is.wholenumber.md)),
 the value `x` is repeated `len` times. Otherwise, an error is thrown.
 
 ## Examples

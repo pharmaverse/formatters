@@ -1,7 +1,7 @@
 # Round and prepare a value for display
 
 This function is used within
-[`format_value()`](https://insightsengineering.github.io/formatters/reference/format_value.md)
+[`format_value()`](https://pharmaverse.github.io/formatters/reference/format_value.md)
 to prepare numeric values within cells for formatting and display.
 
 ## Usage
@@ -12,37 +12,33 @@ valid_round_type
 round_fmt(x, digits, na_str = "NA", round_type = valid_round_type)
 ```
 
-## Format
-
-An object of class `character` of length 3.
-
 ## Arguments
 
 - x:
 
-  (`numeric(1)`)  
+  (`numeric(1)`)\
   value to format.
 
 - digits:
 
-  (`numeric(1)`)  
+  (`numeric(1)`)\
   number of digits to round to, or `NA` to convert to a character value
   with no rounding.
 
 - na_str:
 
-  (`string`)  
+  (`string`)\
   the value to return if `x` is `NA`.
 
 - round_type:
 
-  (`string`)  
-  .  
+  (`string`)\
+  .\
   The type of rounding to perform. Allowed values: (`"iec"`, `"iec_mod"`
-  or `"sas"`)  
+  or `"sas"`)\
   iec, the default, and iec_mod performs rounding compliant with IEC
   60559 (see notes in `round_fmt()`), while sas performs nearest-value
-  rounding consistent with rounding within SAS.  
+  rounding consistent with rounding within SAS.\
   In addition, the rounding of a negative number that rounds to zero
   will be presented as 0 (with the appropriate number of trailing zeros)
   for both `sas` and `iec_mod`, while for `iec`, it will be presented as
@@ -91,7 +87,7 @@ documentation).
 
 ## See also
 
-[`format_value()`](https://insightsengineering.github.io/formatters/reference/format_value.md),
+[`format_value()`](https://pharmaverse.github.io/formatters/reference/format_value.md),
 [`round()`](https://rdrr.io/r/base/Round.html),
 [`sprintf()`](https://rdrr.io/r/base/sprintf.html)
 
