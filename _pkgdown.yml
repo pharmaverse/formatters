@@ -15,6 +15,8 @@ navbar:
         href: unit-test-report/
       - text: Non-CRAN unit test report
         href: unit-test-report-non-cran/
+      - text: Validation report
+        href: https://pharmar.github.io/pharmapkgs/src/contrib/Meta/validation_report_formatters_v0.5.12.html
     github:
       icon: fa-github
       href: https://github.com/pharmaverse/formatters
