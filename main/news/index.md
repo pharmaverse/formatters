@@ -1,6 +1,8 @@
 # Changelog
 
-## formatters 0.5.12.9003
+## formatters 0.5.13
+
+CRAN release: 2026-09-15
 
 - Export `mf_col_widths` accessor (`getter` and `setter`).
 - Fixed a bug in listing pagination where the logical index of empty key

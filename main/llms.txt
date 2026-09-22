@@ -53,12 +53,15 @@ length 1, 2 or – occasionally – 3.
 `formatters` is available on CRAN and you can install the latest
 released version with:
 
+\
 [`install.packages`](https://rdrr.io/r/utils/install.packages.html)`(``"formatters"``)`
 
 or you can install the latest development version directly from GitHub
 with:
 
-`# install.packages("pak")`` ``pak``::`[`pak`](https://pak.r-lib.org/reference/pak.html)`(``"pharmaverse/formatters"``)`
+\
+`# install.packages("pak")`\
+`pak``::`[`pak`](https://pak.r-lib.org/reference/pak.html)`(``"pharmaverse/formatters"``)`
 
 Packaged releases (both those on CRAN and those between official CRAN
 releases) can be found in the [releases

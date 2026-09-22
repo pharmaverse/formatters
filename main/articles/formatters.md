@@ -33,6 +33,7 @@ appropriate for rendering values into ASCII strings. These existing
 formats are specified by their labels. We can see the list of these by
 calling the `list_valid_format_labels` function:
 
+\
 [`list_valid_format_labels`](https://pharmaverse.github.io/formatters/reference/list_formats.md)`(``)`
 
     $`1d`
@@ -76,11 +77,13 @@ indicates rounding to 1 decimal place, etc.
 
 Values are formatted via calls to `format_value`, like so:
 
-[`format_value`](https://pharmaverse.github.io/formatters/reference/format_value.md)`(``5.1235``, format ``=`` ``"xx.xx"``)`
+\
+[`format_value`](https://pharmaverse.github.io/formatters/reference/format_value.md)`(``5.1235``, format ``=`` ``"xx.xx"``)`
 
     [1] "5.12"
 
-[`format_value`](https://pharmaverse.github.io/formatters/reference/format_value.md)`(`[`c`](https://rdrr.io/r/base/c.html)`(``1.2355``, ``2.6789``)``, ``"(xx.xx, xx.xx)"``)`
+\
+[`format_value`](https://pharmaverse.github.io/formatters/reference/format_value.md)`(`[`c`](https://rdrr.io/r/base/c.html)`(``1.2355``, ``2.6789``)``, ``"(xx.xx, xx.xx)"``)`
 
     [1] "(1.24, 2.68)"
 
@@ -103,7 +106,64 @@ representing your table.
 We can build a baby example method for `data.frames` to illustrate this
 process:
 
-`## pagdfrow supports a large number of pieces of information regarding`` ``## siblings and what information should be repeated after a pagination.`` ``## we ignore all that here and just give the absolutely crucial info:`` ``## nm (name), lab (label), rnum (absolute row position), pth ("path"),`` ``## extent (how many lines it takes up), rclass ("class of row")`` ``fake_pagdf_row`` ``<-`` ``function``(``i``, ``rnms``)`` ``{`` `` ``nm`` ``<-`` ``rnms``[``i``]`` `` `[`pagdfrow`](https://pharmaverse.github.io/formatters/reference/pagdfrow.md)`(`` `` nm ``=`` ``nm``, lab ``=`` ``nm``, rnum ``=`` ``i``, pth ``=`` ``nm``, extent ``=`` ``1L``,`` `` rclass ``=`` ``"NA"`` `` ``)`` ``}`` `` ``matrix_form.data.frame`` ``<-`` ``function``(``df``)`` ``{`` `` ``fmts`` ``<-`` `[`lapply`](https://rdrr.io/r/base/lapply.html)`(``df``, ``function``(``x``)`` ``if`` ``(`[`is.null`](https://rdrr.io/r/base/NULL.html)`(`[`obj_format`](https://pharmaverse.github.io/formatters/reference/lab_name.md)`(``x``)``)``)`` ``"xx"`` ``else`` `[`obj_format`](https://pharmaverse.github.io/formatters/reference/lab_name.md)`(``x``)``)`` `` `` ``bodystrs`` ``<-`` `[`mapply`](https://rdrr.io/r/base/mapply.html)`(``function``(``x``, ``fmt``)`` ``{`` `` `[`sapply`](https://rdrr.io/r/base/lapply.html)`(``x``, ``format_value``, format ``=`` ``fmt``)`` `` ``}``, x ``=`` ``df``, fmt ``=`` ``fmts``)`` `` `` ``rnms`` ``<-`` `[`row.names`](https://rdrr.io/r/base/row.names.html)`(``df``)`` `` ``if`` ``(`[`is.null`](https://rdrr.io/r/base/NULL.html)`(``rnms``)``)`` ``{`` `` ``rnms`` ``<-`` `[`as.character`](https://rdrr.io/r/base/character.html)`(`[`seq_len`](https://rdrr.io/r/base/seq.html)`(`[`NROW`](https://rdrr.io/r/base/nrow.html)`(``df``)``)``)`` `` ``}`` `` `` ``cnms`` ``<-`` `[`names`](https://rdrr.io/r/base/names.html)`(``df``)`` `` `` ``strings`` ``<-`` `[`rbind`](https://rdrr.io/r/base/cbind.html)`(`` `` `[`c`](https://rdrr.io/r/base/c.html)`(``""``, ``cnms``)``,`` `` `[`cbind`](https://rdrr.io/r/base/cbind.html)`(``rnms``, ``bodystrs``)`` `` ``)`` `` `` ``fnr`` ``<-`` `[`nrow`](https://rdrr.io/r/base/nrow.html)`(``strings``)`` `` ``fnc`` ``<-`` `[`ncol`](https://rdrr.io/r/base/nrow.html)`(``strings``)`` `` `` ``## center alignment for column labels, left alignment for everything else`` `` ``aligns`` ``<-`` `[`rbind`](https://rdrr.io/r/base/cbind.html)`(`` `` ``"center"``,`` `` `[`matrix`](https://rdrr.io/r/base/matrix.html)`(``"left"``, nrow ``=`` `[`NROW`](https://rdrr.io/r/base/nrow.html)`(``df``)``, ncol ``=`` ``fnc``)`` `` ``)`` `` `` `` ``## build up fake pagination df,`` `` ``rowdf`` ``<-`` `[`basic_pagdf`](https://pharmaverse.github.io/formatters/reference/basic_pagdf.md)`(`[`row.names`](https://rdrr.io/r/base/row.names.html)`(``df``)``)`` `` `[`MatrixPrintForm`](https://pharmaverse.github.io/formatters/reference/MatrixPrintForm.md)`(`` `` strings ``=`` ``strings``,`` `` aligns ``=`` ``aligns``,`` `` spans ``=`` `[`matrix`](https://rdrr.io/r/base/matrix.html)`(``1``, nrow ``=`` ``fnr``, ncol ``=`` ``fnc``)``,`` `` formats ``=`` `[`matrix`](https://rdrr.io/r/base/matrix.html)`(``""``, nrow ``=`` ``fnr``, ncol ``=`` ``fnc``)``,`` `` row_info ``=`` ``rowdf``,`` `` has_topleft ``=`` ``FALSE``,`` `` nlines_header ``=`` ``1``,`` `` nrow_header ``=`` ``1`` `` ``)`` ``}`` `` `[`cat`](https://rdrr.io/r/base/cat.html)`(`[`toString`](https://pharmaverse.github.io/formatters/reference/tostring.md)`(``matrix_form.data.frame``(``mtcars``)``)``)`
+\
+`## pagdfrow supports a large number of pieces of information regarding`\
+`## siblings and what information should be repeated after a pagination.`\
+`## we ignore all that here and just give the absolutely crucial info:`\
+`## nm (name), lab (label), rnum (absolute row position), pth ("path"),`\
+`## extent (how many lines it takes up), rclass ("class of row")`\
+`fake_pagdf_row`` ``<-`` ``function``(``i``, ``rnms``)`` ``{`\
+`  ``nm`` ``<-`` ``rnms``[``i``]`\
+`  `[`pagdfrow`](https://pharmaverse.github.io/formatters/reference/pagdfrow.md)`(`\
+`    nm ``=`` ``nm``, lab ``=`` ``nm``, rnum ``=`` ``i``, pth ``=`` ``nm``, extent ``=`` ``1L``,`\
+`    rclass ``=`` ``"NA"`\
+`  ``)`\
+`}`\
+\
+`matrix_form.data.frame`` ``<-`` ``function``(``df``)`` ``{`\
+`  ``fmts`` ``<-`` `[`lapply`](https://rdrr.io/r/base/lapply.html)`(``df``, ``function``(``x``)`` ``if`` ``(`[`is.null`](https://rdrr.io/r/base/NULL.html)`(`[`obj_format`](https://pharmaverse.github.io/formatters/reference/lab_name.md)`(``x``)``)``)`` ``"xx"`` ``else`` `[`obj_format`](https://pharmaverse.github.io/formatters/reference/lab_name.md)`(``x``)``)`\
+\
+`  ``bodystrs`` ``<-`` `[`mapply`](https://rdrr.io/r/base/mapply.html)`(``function``(``x``, ``fmt``)`` ``{`\
+`    `[`sapply`](https://rdrr.io/r/base/lapply.html)`(``x``, ``format_value``, format ``=`` ``fmt``)`\
+`  ``}``, x ``=`` ``df``, fmt ``=`` ``fmts``)`\
+\
+`  ``rnms`` ``<-`` `[`row.names`](https://rdrr.io/r/base/row.names.html)`(``df``)`\
+`  ``if`` ``(`[`is.null`](https://rdrr.io/r/base/NULL.html)`(``rnms``)``)`` ``{`\
+`    ``rnms`` ``<-`` `[`as.character`](https://rdrr.io/r/base/character.html)`(`[`seq_len`](https://rdrr.io/r/base/seq.html)`(`[`NROW`](https://rdrr.io/r/base/nrow.html)`(``df``)``)``)`\
+`  ``}`\
+\
+`  ``cnms`` ``<-`` `[`names`](https://rdrr.io/r/base/names.html)`(``df``)`\
+\
+`  ``strings`` ``<-`` `[`rbind`](https://rdrr.io/r/base/cbind.html)`(`\
+`    `[`c`](https://rdrr.io/r/base/c.html)`(``""``, ``cnms``)``,`\
+`    `[`cbind`](https://rdrr.io/r/base/cbind.html)`(``rnms``, ``bodystrs``)`\
+`  ``)`\
+\
+`  ``fnr`` ``<-`` `[`nrow`](https://rdrr.io/r/base/nrow.html)`(``strings``)`\
+`  ``fnc`` ``<-`` `[`ncol`](https://rdrr.io/r/base/nrow.html)`(``strings``)`\
+\
+`  ``## center alignment for column labels, left alignment for everything else`\
+`  ``aligns`` ``<-`` `[`rbind`](https://rdrr.io/r/base/cbind.html)`(`\
+`    ``"center"``,`\
+`    `[`matrix`](https://rdrr.io/r/base/matrix.html)`(``"left"``, nrow ``=`` `[`NROW`](https://rdrr.io/r/base/nrow.html)`(``df``)``, ncol ``=`` ``fnc``)`\
+`  ``)`\
+\
+\
+`  ``## build up fake pagination df,`\
+`  ``rowdf`` ``<-`` `[`basic_pagdf`](https://pharmaverse.github.io/formatters/reference/basic_pagdf.md)`(`[`row.names`](https://rdrr.io/r/base/row.names.html)`(``df``)``)`\
+`  `[`MatrixPrintForm`](https://pharmaverse.github.io/formatters/reference/MatrixPrintForm.md)`(`\
+`    strings ``=`` ``strings``,`\
+`    aligns ``=`` ``aligns``,`\
+`    spans ``=`` `[`matrix`](https://rdrr.io/r/base/matrix.html)`(``1``, nrow ``=`` ``fnr``, ncol ``=`` ``fnc``)``,`\
+`    formats ``=`` `[`matrix`](https://rdrr.io/r/base/matrix.html)`(``""``, nrow ``=`` ``fnr``, ncol ``=`` ``fnc``)``,`\
+`    row_info ``=`` ``rowdf``,`\
+`    has_topleft ``=`` ``FALSE``,`\
+`    nlines_header ``=`` ``1``,`\
+`    nrow_header ``=`` ``1`\
+`  ``)`\
+`}`\
+\
+[`cat`](https://rdrr.io/r/base/cat.html)`(`[`toString`](https://pharmaverse.github.io/formatters/reference/tostring.md)`(``matrix_form.data.frame``(``mtcars``)``)``)`
 
                           mpg    cyl   disp    hp    drat    wt     qsec    vs   am   gear   carb
     —————————————————————————————————————————————————————————————————————————————————————————————
