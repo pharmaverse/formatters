@@ -7,6 +7,10 @@ on:
       - "v*"
   workflow_dispatch:
 
+concurrency:
+  group: pkgdown-publish-gh-pages
+  cancel-in-progress: false
+
 jobs:
   docs:
     name: Pkgdown Docs 📚
